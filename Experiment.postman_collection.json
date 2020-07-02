@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "1ace213b-923e-4795-b0dd-5085e9f23299",
+		"name": "Experiment",
+		"description": "For Automated Request Testing ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Retrieve User",
+			"item": [
+				{
+					"name": "DEMO GET USER 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b3766ea7-ae82-4505-8602-d61aab351853",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"First Name 1\", function () {\r",
+									"    var jsonData = pm.response.json().data;\r",
+									"    pm.expect(jsonData.first_name).to.eql(\"George\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}1",
+							"host": [
+								"{{URL}}1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DEMO GET USER 5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bb5927cd-2a02-4074-ab05-468bb6d6b974",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"First Name 1\", function () {\r",
+									"    var jsonData = pm.response.json().data;\r",
+									"    pm.expect(jsonData.first_name).to.eql(\"George\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}1",
+							"host": [
+								"{{URL}}1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DEMO GET USER  2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5c44608d-8e45-4d38-bc80-3dc7b76fce24",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"First Name 1\", function () {\r",
+									"    var jsonData = pm.response.json().data;\r",
+									"    pm.expect(jsonData.first_name).to.eql(\"George\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}2",
+							"host": [
+								"{{URL}}2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DEMO GET USER 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7a72263c-c595-45ae-bcb0-c97d40f29d66",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"First Name 1\", function () {\r",
+									"    var jsonData = pm.response.json().data;\r",
+									"    pm.expect(jsonData.first_name).to.eql(\"George\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}1",
+							"host": [
+								"{{URL}}1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Create User",
+			"item": [
+				{
+					"name": "POST CREATE ATUL",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c8a59742-11dc-4da5-bb36-1fbd79b90c28",
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201,202]);\r",
+									"});\r",
+									"pm.test(\"Retirved Name\", function () {\r",
+									"    var jsonData = pm.response.json().name;\r",
+									"    pm.expect(jsonData).to.eql(\"Atul\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Atul\",\r\n    \"job\": \"Programmer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}users",
+							"host": [
+								"{{URL}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST CREATE SURESH",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a1b8be66-a012-40aa-9ce0-bcf9bffccd8b",
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201,202]);\r",
+									"});\r",
+									"pm.test(\"Retirved Name\", function () {\r",
+									"    var jsonData = pm.response.json().name;\r",
+									"    pm.expect(jsonData).to.eql(\"Atul\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Suresh\",\r\n    \"job\": \"Painter\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}users",
+							"host": [
+								"{{URL}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST CREATE TOM",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c31e8a52-4d32-42ba-8b0d-71a80bc26d03",
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201,202]);\r",
+									"});\r",
+									"pm.test(\"Retirved Name\", function () {\r",
+									"    var jsonData = pm.response.json().name;\r",
+									"    pm.expect(jsonData).to.eql(\"Atul\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Suresh\",\r\n    \"job\": \"Painter\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}users",
+							"host": [
+								"{{URL}}users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
